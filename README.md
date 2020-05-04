@@ -9,3 +9,4 @@ The raw data from this source is not clearly explain where the data from, what t
 
 In this regards, I can make a guess for the data usage and fuctions for making the prediction.
 
+The data cosist of many features,the one most important is wether the person/cutomer created new creditcard or not.
