@@ -1,4 +1,4 @@
-# Purwadhika Final Project - Credit Card Marketing Acceptance
+# Purwadhika Final Project - Credit Card Marketing Acceptance (ONGOING - NOT FINISH YET)
 
 This Project will deliver knowlegde and understanding about Credit Card Marketing that already happend in the past.
 The data that collected in this instance will be used for further credit card marketing analysis.
