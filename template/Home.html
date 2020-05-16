@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Marketing Prediction</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script> -->
+    <style>
+        .item-h1 {
+          border: 2px solid black;
+          padding: 7px;
+          height: 50px;
+        }
+
+        .row-h1 {
+          background: #928080;
+          height: 250px;
+        }
+
+        .navbar {
+          overflow: hidden;
+          background-color: #333;
+          font-family: Arial, Helvetica, sans-serif;
+          margin: 25px 100px 75px 50px;
+          
+        }
+
+        .column {
+          float: left;
+          padding: 10px;
+          margin: 25px 100px 75px 50px;
+        }
+        /* Left and right column */
+        .column.side {
+          width: 25%;
+        }
+        /* Middle column */
+        .column.middle {
+          width: 50%;
+        }
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 450px) {
+          .column.side, .column.middle {
+            width: 100%;
+          }
+        }
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        .navbar a {
+          float: left;
+          font-size: 16px;
+          color: white;
+          text-align: center;
+          padding: 16px 20px;
+          text-decoration: none;
+        }
+        .text-center{text-align:center!important}
+
+        .dropdown {
+          float: left;
+          overflow: hidden;
+          
+        }
+        
+        .dropdown .dropbtn {
+          cursor: pointer;
+          font-size: 16px;  
+          border: none;
+          outline: none;
+          color: white;
+          padding: 16px 20px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0;
+        }
+        
+        .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+          background-color: red;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+        
+        .dropdown-content a:hover {
+          background-color: #ddd;
+        }
+        
+        .show {
+          display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="text-center my-3">Credit Card Marketing Dashboard</h1>
+    
+    <div class="navbar">
+        <a href="file:///C:/Users/ryani/Documents/Learn/Data%20Science/Jupyter%20Notebook/Final%20Project/template/Home.html#about">Home</a>
+        <div class="dropdown">
+        <button class="dropbtn" onmouseover="myFunction()">Menu
+            <!-- <i class="fa fa-caret-down"></i> -->
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="file:///C:/Users/ryani/Documents/Learn/Data%20Science/Jupyter%20Notebook/Final%20Project/template/index.html">Visualisation</a>
+          <a href="file:///C:/Users/ryani/Documents/Learn/Data%20Science/Jupyter%20Notebook/Final%20Project/template/prediction.html">Prediction</a>
+        </div>
+        </div>
+        <a href="file:///C:/Users/ryani/Documents/Learn/Data%20Science/Jupyter%20Notebook/Final%20Project/template/about.html">About</a>
+    </div> 
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+    
+    <div class="row">
+      <div class="column middle">
+        <h2>Welcome to the Final Project!</h2>
+        <p>My name is <a href="https://www.linkedin.com/in/ryan-natanael-sihono-160216118">Ryan Natanael Sihono</a>.</p>
+        <p>This is the final project that given by <a href="https://www.purwadhika.com/">Purwadhika</a>. 
+        The project is a Data Science project that will predict a possibility of a customer candidate wether the person will create a new credit card or not.</p>
+      </div>
+      <div class="column side"></div>
+    </div>
+
+</body>
+</html>
