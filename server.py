@@ -1,38 +1,51 @@
-from flask import Flask, render_template, request
+import joblib
 import numpy as np
 import pandas as pd
-import plotly
-import joblib
+from flask import Flask, render_template, request, url_for
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('Home.html')
+    return render_template('prediction.html')
 
-@app.route('/breast_cancer', methods=["POST", "GET"])
-def cancer_predict():
+@app.route('/prediction', methods=["POST", "GET"])
+def creditcard_predict():
+
     if request.method == "POST":
         input = request.form
         feature = [
-            float(input['worstconcave']),
-            float(input['worstperim']),
-            float(input['meanconcave']),
-            float(input['worstradius']),
-            float(input['meanperim']),
-            float(input['worstarea']),
-            float(input['meanradius']),
-            float(input['meanarea']),
-            float(input['meanconcavity']),
-            float(input['worstconcavity'])
+            float(input['Bank_Accnt_Open']),
+            float(input['Household_Size']),
+            float(input['Homes_Owned']),
+            float(input['Credit_Rating']),
+            float(input['Average_Balance']),
+            float(input['Q1_Balance']),
+            float(input['Q2_Balance']),
+            float(input['Q3_Balance']),
+            float(input['Q4_Balance']),
+            float(input['Reward_Air Miles']),
+            float(input['Reward_Cash Back']),
+            float(input['Reward_Points']),
+            float(input['mailer_Letter']),
+            float(input['mailer_Postcard']),
+            float(input['income_High']),
+            float(input['income_Low']),
+            float(input['income_Medium']),
+            float(input['overdraw_No']),
+            float(input['overdraw_Yes']),
+            float(input['CC_1']),
+            float(input['CC_2']),
+            float(input['CC_3']),
+            float(input['CC_4']),
+            float(input['hold_home_1']),
+            float(input['hold_home_2']),
+            float(input['hold_home_3'])
         ]
-
-        scaled_feature = scaler.transform([feature])
-        feature_pca = pca10.transform(scaled_feature)
-
-        predpca = gr10.predict(feature_pca)[0]
-        pred_probapca = gr10.predict_proba(feature_pca)
-        endresult = f"{round(np.max(pred_probapca)*100,2)}% {'BENIGN' if predpca == 1 else 'NOT BENIGN'}"
+        
+        pred= dst_ov.predict(feature)
+        pred_proba = dst_ov.predict_proba(feature)
+        endresult = f"{round(np.max(pred_proba)*100,2)}% {'Accept the Offer' if pred == 1 else 'NOT Accept'}"
 
 
         # pred = gbc.predict([feature])[0]
@@ -48,9 +61,6 @@ def cancer_predict():
         worstconcavity=input['worstconcavity'])
 
 if __name__ == '__main__':
-    gbc = joblib.load('gbc_breast_cancer')
-    gr10 = joblib.load("gr10") # load model ML GBC pca 2
-    scaler = joblib.load("scalerbreast10") # load si scaler
-    pca10 = joblib.load("pcabreast10") # load si pca
+    dst_ov = joblib.load("DecisionTree-with-Oversampling") # load predictor
 
     app.run(debug=True, port=4000)
