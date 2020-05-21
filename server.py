@@ -11,7 +11,6 @@ def home():
 
 @app.route('/prediction', methods=["POST", "GET"])
 def creditcard_predict():
-
     if request.method == "POST":
         input = request.form
         feature = [
@@ -43,8 +42,8 @@ def creditcard_predict():
             float(input['hold_home_3'])
         ]
         
-        pred= dst_ov.predict(feature)
-        pred_proba = dst_ov.predict_proba(feature)
+        pred= dst_ov.predict([feature])[0]
+        pred_proba = dst_ov.predict_proba([feature])
         endresult = f"{round(np.max(pred_proba)*100,2)}% {'Accept the Offer' if pred == 1 else 'NOT Accept'}"
 
 
