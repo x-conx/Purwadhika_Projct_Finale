@@ -4,9 +4,20 @@ import pandas as pd
 from flask import Flask, render_template, request, url_for
 
 app = Flask(__name__)
+@app.route('/Home-CreditCard-Prediction')
+def home():
+    return render_template('Home.html')
+
+@app.route('/About')
+def about():
+    return render_template('about.html')
+
+@app.route('/Visualisation')
+def vis():
+    return render_template('visual.html')
 
 @app.route('/')
-def home():
+def prediction():
     return render_template('prediction.html')
 
 @app.route('/prediction', methods=["POST", "GET"])
@@ -23,8 +34,8 @@ def creditcard_predict():
             float(input['Q2_Balance']),
             float(input['Q3_Balance']),
             float(input['Q4_Balance']),
-            float(input['Reward_Air Miles']),
-            float(input['Reward_Cash Back']),
+            float(input['Reward_Air_Miles']),
+            float(input['Reward_Cash_Back']),
             float(input['Reward_Points']),
             float(input['mailer_Letter']),
             float(input['mailer_Postcard']),
@@ -42,22 +53,25 @@ def creditcard_predict():
             float(input['hold_home_3'])
         ]
         
-        pred= dst_ov.predict([feature])[0]
+        pred= dst_ov.predict([feature])
         pred_proba = dst_ov.predict_proba([feature])
-        endresult = f"{round(np.max(pred_proba)*100,2)}% {'Accept the Offer' if pred == 1 else 'NOT Accept'}"
+        if pred == 0:
+            endresult = f"{round(pred_proba.max()*100)}% {'NOT Accept the Offer'}"
+        else:
+            endresult = f"{round(pred_proba.max()*100)}% {'Customer will Accept the Offer'}"
 
 
-        # pred = gbc.predict([feature])[0]
-        # pred_proba = gbc.predict_proba([feature])
-        # pred_and_proba = f"{round(np.max(pred_proba)*100,2)}% {'BENIGN' if pred == 1 else 'NOT BENIGN'}"
-
-        return render_template('result.html',
-        data=input, prediction=endresult, worstconcave=input['worstconcave'],
-        worstperim=input['worstperim'], meanconcave=input['meanconcave'],
-        worstradius=input['worstradius'], meanperim=input['meanperim'],
-        worstarea=input['worstarea'], meanradius=input['meanradius'],
-        meanarea=input['meanarea'], meanconcavity=input['meanconcavity'],
-        worstconcavity=input['worstconcavity'])
+        
+        return render_template('prediction result.html',
+        data=input, prediction=endresult, Bank_Accnt_Open=input['Bank_Accnt_Open'],Household_Size=input['Household_Size'],
+        Homes_Owned=input['Homes_Owned'],Credit_Rating=input['Credit_Rating'],Average_Balance=input['Average_Balance'],
+        Q1_Balance=input['Q1_Balance'],Q2_Balance=input['Q2_Balance'],Q3_Balance=input['Q3_Balance'],
+        Q4_Balance=input['Q4_Balance'],Reward_Air_Miles=input['Reward_Air_Miles'],Reward_Cash_Back=input['Reward_Cash_Back'],
+        Reward_Points=input['Reward_Points'],mailer_Letter=input['mailer_Letter'],mailer_Postcard=input['mailer_Postcard'],
+        income_High=input['income_High'],income_Low=input['income_Low'],income_Medium=input['income_Medium'],
+        overdraw_No=input['overdraw_No'],overdraw_Yes=input['overdraw_Yes'],CC_1=input['CC_1'],CC_2=input['CC_2'],
+        CC_3=input['CC_3'],CC_4=input['CC_4'],hold_home_1=input['hold_home_1'],hold_home_2=input['hold_home_2'],
+        hold_home_3=input['hold_home_3'])
 
 if __name__ == '__main__':
     dst_ov = joblib.load("DecisionTree-with-Oversampling") # load predictor

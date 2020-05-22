@@ -113,17 +113,17 @@
     <h1 class="text-center my-3">Credit Card Marketing Dashboard</h1>
     
     <div class="navbar">
-        <a href="file:///C:/Users/ryani/Documents/Learn/Data%20Science/Jupyter%20Notebook/Final%20Project/template/Home.html#about">Home</a>
+        <a href="/Home-CreditCard-Prediction">Home</a>
         <div class="dropdown">
         <button class="dropbtn" onmouseover="myFunction()">Menu
             <!-- <i class="fa fa-caret-down"></i> -->
         </button>
         <div id="myDropdown" class="dropdown-content">
-          <a href="file:///C:/Users/ryani/Documents/Learn/Data%20Science/Jupyter%20Notebook/Final%20Project/template/index.html">Visualisation</a>
-          <a href="file:///C:/Users/ryani/Documents/Learn/Data%20Science/Jupyter%20Notebook/Final%20Project/template/prediction.html">Prediction</a>
+          <a href="/Visualisation">Visualisation</a>
+          <a href="/">Prediction</a>
         </div>
         </div>
-        <a href="file:///C:/Users/ryani/Documents/Learn/Data%20Science/Jupyter%20Notebook/Final%20Project/template/about.html">About</a>
+        <a href="/About">About</a>
     </div> 
     <script>
         /* When the user clicks on the button, 
@@ -147,88 +147,87 @@
         }
     </script>
     
-    <div class="row">
-      <div class="column middle">
+<center>
         <p >Please give inputs. All columns are manadatory.</p>
         <br>
         <br>
         <form method="POST" action='http://localhost:4000/prediction'>
-            <label for=1>Bank_Accnt_Open :</label>
+            <label for=1>Bank Accnt Open :</label>
             <input type="text" name="Bank_Accnt_Open" style="width: 250px" id="Bank_Accnt_Open" required=True/>
             <br>
-            <br><label for=2>Household_Size :</label>
+            <br><label for=2>Household Size :</label>
             <input type="text" name="Household_Size" style="width: 250px" id="Household_Size" required=True/>
             <br>
-            <br><label for=3>Homes_Owned :</label>
+            <br><label for=3>Homes Owned :</label>
             <input type="text" name="Homes_Owned" style="width: 250px" id="Homes_Owned" required=True/>
             <br>
-            <br><label for=4>Credit_Rating :</label>
+            <br><label for=4>Credit Rating :</label>
             <input type="text" name="Credit_Rating" style="width: 250px" id="Credit_Rating" required=True/>
             <br>
-            <br><label for=5>Average_Balance :</label>
+            <br><label for=5>Average Balance :</label>
             <input type="text" name="Average_Balance" style="width: 250px" id="Average_Balance" required=True/>
             <br>
-            <br><label for=6>Q1_Balance :</label>
+            <br><label for=6>Q1 Balance :</label>
             <input type="text" name="Q1_Balance" style="width: 250px" id="Q1_Balance" required=True/>
             <br>
-            <br><label for=7>Q2_Balance :</label>
+            <br><label for=7>Q2 Balance :</label>
             <input type="text" name="Q2_Balance" style="width: 250px" id="Q2_Balance" required=True/>
             <br>
-            <br><label for=8>Q3_Balance :</label>
+            <br><label for=8>Q3 Balance :</label>
             <input type="text" name="Q3_Balance" style="width: 250px" id="Q3_Balance" required=True/>
             <br>
-            <br><label for=9>Q4_Balance :</label>
+            <br><label for=9>Q4 Balance :</label>
             <input type="text" name="Q4_Balance" style="width: 250px" id="Q4_Balance" required=True/>
             <br>
-            <br><label for=10>Reward_Air Miles :</label>
-            <input type="text" name="Reward_Air Miles" style="width: 250px" id="Reward_Air Miles" required=True/>
+            <br><label for=10>Reward Air Miles :</label>
+            <input type="text" name="Reward_Air_Miles" style="width: 250px" id="Reward_Air_Miles" required=True/>
             <br>
-            <br><label for=11>Reward_Cash Back :</label>
-            <input type="text" name="Reward_Cash Back" style="width: 250px" id="Reward_Cash Back" required=True/>
+            <br><label for=11>Reward Cash Back :</label>
+            <input type="text" name="Reward_Cash_Back" style="width: 250px" id="Reward_Cash_Back" required=True/>
             <br>
-            <br><label for=12>Reward_Points :</label>
+            <br><label for=12>Reward Points :</label>
             <input type="text" name="Reward_Points" style="width: 250px" id="Reward_Points" required=True/>
             <br>
-            <br><label for=13>mailer_Letter :</label>
+            <br><label for=13>mailer Letter :</label>
             <input type="text" name="mailer_Letter" style="width: 250px" id="mailer_Letter" required=True/>
             <br>
-            <br><label for=14>mailer_Postcard :</label>
+            <br><label for=14>mailer Postcard :</label>
             <input type="text" name="mailer_Postcard" style="width: 250px" id="mailer_Postcard" required=True/>
             <br>
-            <br><label for=15>income_High :</label>
+            <br><label for=15>income High :</label>
             <input type="text" name="income_High" style="width: 250px" id="income_High" required=True/>
             <br>
-            <br><label for=16>income_Low :</label>
+            <br><label for=16>income Low :</label>
             <input type="text" name="income_Low" style="width: 250px" id="income_Low" required=True/>
             <br>
-            <br><label for=17>income_Medium :</label>
+            <br><label for=17>income Medium :</label>
             <input type="text" name="income_Medium" style="width: 250px" id="income_Medium" required=True/>
             <br>
-            <br><label for=18>overdraw_No :</label>
+            <br><label for=18>overdraw No :</label>
             <input type="text" name="overdraw_No" style="width: 250px" id="overdraw_No" required=True/>
             <br>
-            <br><label for=19>overdraw_Yes :</label>
+            <br><label for=19>overdraw Yes :</label>
             <input type="text" name="overdraw_Yes" style="width: 250px" id="overdraw_Yes" required=True/>
             <br>
-            <br><label for=20>CC_1 :</label>
+            <br><label for=20>CC 1 :</label>
             <input type="text" name="CC_1" style="width: 250px" id="CC_1" required=True/>
             <br>
-            <br><label for=21>CC_2 :</label>
+            <br><label for=21>CC 2 :</label>
             <input type="text" name="CC_2" style="width: 250px" id="CC_2" required=True/>
             <br>
-            <br><label for=22>CC_3 :</label>
+            <br><label for=22>CC 3 :</label>
             <input type="text" name="CC_3" style="width: 250px" id="CC_3" required=True/>
             <br>
-            <br><label for=23>CC_4 :</label>
+            <br><label for=23>CC 4 :</label>
             <input type="text" name="CC_4" style="width: 250px" id="CC_4" required=True/>
             <br>
-            <br><label for=24>hold_home_1 :</label>
+            <br><label for=24>hold home 1 :</label>
             <input type="text" name="hold_home_1" style="width: 250px" id="hold_home_1" required=True/>
             <br>
-            <br><label for=25>hold_home_2 :</label>
+            <br><label for=25>hold home 2 :</label>
             <input type="text" name="hold_home_2" style="width: 250px" id="hold_home_2" required=True/>
             <br>
-            <br><label for=26>hold_home_3 :</label>
+            <br><label for=26>hold home 3 :</label>
             <input type="text" name="hold_home_3" style="width: 250px" id="hold_home_3" required=True/>
             <br>
             <br>
@@ -236,10 +235,7 @@
             <br>
             <br>
         </form>
-           
-      </div>
-      <div class="column side"></div>
-    </div>
+</center>>
     
     
 </body>

@@ -3,52 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Result</title>
+    <style>
+        .item-h1 {
+          border: 2px solid black;
+          padding: 7px;
+          height: 50px;
+        }
+
+        .row-h1 {
+          background: #928080;
+          height: 250px;
+        }
+
+        .navbar {
+          overflow: hidden;
+          background-color: #333;
+          font-family: Arial, Helvetica, sans-serif;
+          margin: 25px 100px 75px 50px;
+          
+        }
+
+        .column {
+          float: left;
+          padding: 10px;
+          margin: 25px 100px 75px 50px;
+        }
+        /* Left and right column */
+        .column.side {
+          width: 25%;
+        }
+        /* Middle column */
+        .column.middle {
+          width: 50%;
+        }
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 450px) {
+          .column.side, .column.middle {
+            width: 100%;
+          }
+        }
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        .navbar a {
+          float: left;
+          font-size: 16px;
+          color: white;
+          text-align: center;
+          padding: 16px 20px;
+          text-decoration: none;
+        }
+        .text-center{text-align:center!important}
+
+        .dropdown {
+          float: left;
+          overflow: hidden;
+          
+        }
+        
+        .dropdown .dropbtn {
+          cursor: pointer;
+          font-size: 16px;  
+          border: none;
+          outline: none;
+          color: white;
+          padding: 16px 20px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0;
+        }
+        
+        .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+          background-color: red;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+        
+        .dropdown-content a:hover {
+          background-color: #ddd;
+        }
+        
+        .show {
+          display: block;
+        }
+
+    </style>
 </head>
 <body>
-    <b>Bank_Accnt_Open: <b> {{Bank_Accnt_Open}}<br>
-    <b>Household_Size: <b> {{Household_Size}}<br>
-    <b>Homes_Owned: <b> {{Homes_Owned}}<br>
-    <b>Credit_Rating: <b> {{Credit_Rating}}<br>,
-    <b>Average_Balance: <b> {{Average_Balance}}<br>
-    <b>Q1_Balance: <b> {{Q1_Balance}}<br>
-    <b>Q2_Balance: <b> {{Q2_Balance}}<br>
-    <b>Q3_Balance: <b> {{Q3_Balance}}<br>
-    <b>Q4_Balance: <b> {{Q4_Balance}}<br>
-    <b>Reward_Air Miles: <b> {{Reward_Air Miles}}<br>
-    <b>Reward_Cash Back: <b> {{Reward_Cash Back}}<br>
-    <b>Reward_Points: <b> {{Reward_Points}}<br>
-    <b>mailer_Letter: <b> {{mailer_Letter}}<br>
-    <b>mailer_Postcard: <b> {{mailer_Postcard}}<br>
-    <b>income_High: <b> {{income_High}}<br>
-    <b>income_Low: <b> {{income_Low}}<br>
-    <b>income_Medium: <b> {{income_Medium}}<br>
-    <b>overdraw_No: <b> {{overdraw_No}}<br>
-    <b>overdraw_Yes: <b> {{overdraw_Yes}}<br>
-    <b>CC_1: <b> {{CC_1}}<br>
-    <b>CC_2: <b> {{CC_2}}<br>
-    <b>CC_3: <b> {{CC_3}}<br>
-    <b>CC_4: <b> {{CC_4}}<br>
-    <b>hold_home_1: <b> {{hold_home_1}}<br>
-    <b>hold_home_2: <b> {{hold_home_2}}<br>
-    <b>hold_home_3: <b> {{hold_home_3}}<br>
+    <h1 class="text-center my-3">Credit Card Marketing Dashboard</h1>
+    <div class="navbar">
+        <a href="/Home-CreditCard-Prediction">Home</a>
+        <div class="dropdown">
+        <button class="dropbtn" onmouseover="myFunction()">Menu
+            <!-- <i class="fa fa-caret-down"></i> -->
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="/Visualisation">Visualisation</a>
+          <a href="/">Prediction</a>
+        </div>
+        </div>
+        <a href="/About">About</a>
+    </div>  
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
         
-    <b>Worst Concave Points: </br> {{worstconcave}}<br>
-    <b>Worst Perimeter: </b> {{worstperim}}<br>
-    <b>Mean Concave Points: </b> {{meanconcave}}<br>
-    <b>Worst Radius: </b> {{worstradius}}<br>
-    <b>Mean Perimeter: </b> {{meanperim}}<br>
-    <b>Worst Area: </b> {{worstarea}}<br>
-    <b>Mean Radius: </b> {{meanradius}}<br>
-    <b>Mean Area: </b> {{meanarea}}<br>
-    <b>Mean Concavity: </b> {{meancocavity}}<br>
-    <b>Worst Concavity: </b> {{worstconcavity}}<br>
-    <br>
-    Analysist Result:
-    {{prediction}}
-    <br>
-    <a href="/" target="_self">
-        <button>Analyze Again</button>
-    </a>
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+    </script>
+
+<center>
+    
+            <p><b><u><h2>Prediction Result</h2></u></b></p>
+            <b>Bank Accnt Open: <b> {{Bank_Accnt_Open}}<br>
+            <b>Household Size: <b> {{Household_Size}}<br>
+            <b>Homes Owned: <b> {{Homes_Owned}}<br>
+            <b>Credit Rating: <b> {{Credit_Rating}}<br>
+            <b>Average Balance: <b> {{Average_Balance}}<br>
+            <b>Q1 Balance: <b> {{Q1_Balance}}<br>
+            <b>Q2 Balance: <b> {{Q2_Balance}}<br>
+            <b>Q3 Balance: <b> {{Q3_Balance}}<br>
+            <b>Q4 Balance: <b> {{Q4_Balance}}<br>
+            <b>Reward Air Miles: <b> {{Reward_Air_Miles}}<br>
+            <b>Reward Cash Back: <b> {{Reward_Cash_Back}}<br>
+            <b>Reward Points: <b> {{Reward_Points}}<br>
+            <b>mailer Letter: <b> {{mailer_Letter}}<br>
+            <b>mailer Postcard: <b> {{mailer_Postcard}}<br>
+            <b>income High: <b> {{income_High}}<br>
+            <b>income Low: <b> {{income_Low}}<br>
+            <b>income Medium: <b> {{income_Medium}}<br>
+            <b>overdraw No: <b> {{overdraw_No}}<br>
+            <b>overdraw Yes: <b> {{overdraw_Yes}}<br>
+            <b>CC 1: <b> {{CC_1}}<br>
+            <b>CC 2: <b> {{CC_2}}<br>
+            <b>CC 3: <b> {{CC_3}}<br>
+            <b>CC 4: <b> {{CC_4}}<br>
+            <b>hold home 1: <b> {{hold_home_1}}<br>
+            <b>hold home 2: <b> {{hold_home_2}}<br>
+            <b>hold home 3: <b> {{hold_home_3}}<br>
+                
+
+            <hr class="navbar">
+            <br>
+            Analysist Result:
+            {{prediction}}
+            <br><br><br><br>
+
+           
+            <a href="/" target="_self">
+                <button style="background-color: navy; color: whitesmoke; width: 500px; height: 50px" class="btn btn-light">
+                    Analyze Again
+                </button>
+            </a>
+
+        
+        <!-- <div class="column side"></div> -->
+    
+</center>
 </body>
 </html>
