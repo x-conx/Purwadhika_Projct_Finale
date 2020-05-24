@@ -15,7 +15,12 @@
           background: #928080;
           height: 250px;
         }
-
+        h1{
+          color: navy;
+          font-weight: bold;
+          font-family: 'Arial';
+          font-size: 53px;
+      }
         .navbar {
           overflow: hidden;
           background-color: #333;
@@ -57,7 +62,10 @@
           padding: 16px 20px;
           text-decoration: none;
         }
-        .text-center{text-align:center!important}
+        .text-center{
+          text-align:center!important;
+          font-family: Helvetica, sans-serif;
+        }
 
         .dropdown {
           float: left;
@@ -106,6 +114,12 @@
         .show {
           display: block;
         }
+        .res{
+          font-size: 50px;
+          text-align: center;
+          font-weight:bold;
+          color: {{color}}
+        }
 
     </style>
 </head>
@@ -149,38 +163,31 @@
 <center>
     
             <p><b><u><h2>Prediction Result</h2></u></b></p>
-            <b>Bank Accnt Open: <b> {{Bank_Accnt_Open}}<br>
-            <b>Household Size: <b> {{Household_Size}}<br>
-            <b>Homes Owned: <b> {{Homes_Owned}}<br>
-            <b>Credit Rating: <b> {{Credit_Rating}}<br>
-            <b>Average Balance: <b> {{Average_Balance}}<br>
-            <b>Q1 Balance: <b> {{Q1_Balance}}<br>
-            <b>Q2 Balance: <b> {{Q2_Balance}}<br>
-            <b>Q3 Balance: <b> {{Q3_Balance}}<br>
-            <b>Q4 Balance: <b> {{Q4_Balance}}<br>
-            <b>Reward Air Miles: <b> {{Reward_Air_Miles}}<br>
-            <b>Reward Cash Back: <b> {{Reward_Cash_Back}}<br>
-            <b>Reward Points: <b> {{Reward_Points}}<br>
-            <b>mailer Letter: <b> {{mailer_Letter}}<br>
-            <b>mailer Postcard: <b> {{mailer_Postcard}}<br>
-            <b>income High: <b> {{income_High}}<br>
-            <b>income Low: <b> {{income_Low}}<br>
-            <b>income Medium: <b> {{income_Medium}}<br>
-            <b>overdraw No: <b> {{overdraw_No}}<br>
-            <b>overdraw Yes: <b> {{overdraw_Yes}}<br>
-            <b>CC 1: <b> {{CC_1}}<br>
-            <b>CC 2: <b> {{CC_2}}<br>
-            <b>CC 3: <b> {{CC_3}}<br>
-            <b>CC 4: <b> {{CC_4}}<br>
-            <b>hold home 1: <b> {{hold_home_1}}<br>
-            <b>hold home 2: <b> {{hold_home_2}}<br>
-            <b>hold home 3: <b> {{hold_home_3}}<br>
-                
+            <div>
+              <b>Bank Accnt Open: <b> {{Bank_Accnt_Open}}<br>
+              <b>Household Size: <b> {{Household_Size}}<br>
+              <b>Homes Owned: <b> {{Homes_Owned}}<br>
+              <b>Credit Rating: <b> {{Credit_Rating}}<br>
+              <b>Average Balance: <b> {{Average_Balance}}<br>
+              <b>Q1 Balance: <b> {{Q1_Balance}}<br>
+              <b>Q2 Balance: <b> {{Q2_Balance}}<br>
+              <b>Q3 Balance: <b> {{Q3_Balance}}<br>
+              <b>Q4 Balance: <b> {{Q4_Balance}}<br>
+              <b>Current Credit Card Reward : <b> {{Reward}}<br>
+              <b>Mailer Type: <b> {{mailer}}<br>
+              <b>Income Level: <b> {{income}}<br>
+              <b>Current Overdraw Protection: <b> {{overdraw}}<br>
+              <b>Current Credit Card: <b> {{cc}}<br>
+              <b>Own Number of Home(s): <b> {{hold_home}}<br>
+            </div>    
 
             <hr class="navbar">
             <br>
             Analysist Result:
-            {{prediction}}
+            <div class="res">
+              {{prediction}}
+            </div>
+            
             <br><br><br><br>
 
            

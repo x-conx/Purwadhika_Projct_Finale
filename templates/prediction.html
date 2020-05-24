@@ -10,6 +10,32 @@
           padding: 7px;
           height: 50px;
         }
+        .form-control{
+          display:block;
+          width:100%;
+          height:calc(1.5em + .75rem + 2px);
+          padding:.375rem .75rem;
+          font-size:1rem;
+          font-weight:400;
+          line-height:1.5;
+          color:#495057;
+          background-color:#fff;
+          background-clip:padding-box;
+          border:1px solid #ced4da;
+          border-radius:.25rem;
+          transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out
+        }
+        .form-group{
+          display:-ms-flexbox;
+          display:flex;
+          -ms-flex:0 0 auto;
+          flex:0 0 auto;
+          -ms-flex-flow:row wrap;
+          flex-flow:row wrap;
+          -ms-flex-align:center;
+          align-items:center;
+          margin-bottom:0
+        }
 
         .row-h1 {
           background: #928080;
@@ -57,12 +83,14 @@
           padding: 16px 20px;
           text-decoration: none;
         }
-        .text-center{text-align:center!important}
+        .text-center{
+          text-align:center!important;
+          font-family: Helvetica;
+        }
 
         .dropdown {
           float: left;
           overflow: hidden;
-          
         }
         
         .dropdown .dropbtn {
@@ -102,11 +130,29 @@
         .dropdown-content a:hover {
           background-color: #ddd;
         }
-        
+
         .show {
           display: block;
         }
-
+        .form-row{
+          display:-ms-flexbox;
+          display:flex;
+          -ms-flex-wrap:wrap;
+          flex-wrap:nowrap;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .col-md-auto{-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:100%}
+        .col-md-1{-ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%}
+        .col-md-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}
+        .col-md-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}
+        .col-md-4{-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}
+        .col-md-5{-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}
+        .col-md-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}
+        .col-md-7{-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}
+        .col-md-8{-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}
+        .col-md-9{-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}
+        .col-md-10{-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}
+        .col-md-11{-ms-flex:0 0 91.666667%;flex:0 0 91.666667%;max-width:91.666667%}
     </style>    
 </head>
 <body>
@@ -146,89 +192,131 @@
           }
         }
     </script>
-    
+    <!-- margin: 25px 50px 75px 50px; -->
 <center>
-        <p >Please give inputs. All columns are manadatory.</p>
+        <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Please give inputs. All columns are manadatory.</p>
         <br>
         <br>
         <form method="POST" action='http://localhost:4000/prediction'>
-            <label for=1>Bank Accnt Open :</label>
-            <input type="text" name="Bank_Accnt_Open" style="width: 250px" id="Bank_Accnt_Open" required=True/>
-            <br>
-            <br><label for=2>Household Size :</label>
-            <input type="text" name="Household_Size" style="width: 250px" id="Household_Size" required=True/>
-            <br>
-            <br><label for=3>Homes Owned :</label>
-            <input type="text" name="Homes_Owned" style="width: 250px" id="Homes_Owned" required=True/>
-            <br>
-            <br><label for=4>Credit Rating :</label>
-            <input type="text" name="Credit_Rating" style="width: 250px" id="Credit_Rating" required=True/>
-            <br>
-            <br><label for=5>Average Balance :</label>
-            <input type="text" name="Average_Balance" style="width: 250px" id="Average_Balance" required=True/>
-            <br>
-            <br><label for=6>Q1 Balance :</label>
-            <input type="text" name="Q1_Balance" style="width: 250px" id="Q1_Balance" required=True/>
-            <br>
-            <br><label for=7>Q2 Balance :</label>
-            <input type="text" name="Q2_Balance" style="width: 250px" id="Q2_Balance" required=True/>
-            <br>
-            <br><label for=8>Q3 Balance :</label>
-            <input type="text" name="Q3_Balance" style="width: 250px" id="Q3_Balance" required=True/>
-            <br>
-            <br><label for=9>Q4 Balance :</label>
-            <input type="text" name="Q4_Balance" style="width: 250px" id="Q4_Balance" required=True/>
-            <br>
-            <br><label for=10>Reward Air Miles :</label>
-            <input type="text" name="Reward_Air_Miles" style="width: 250px" id="Reward_Air_Miles" required=True/>
-            <br>
-            <br><label for=11>Reward Cash Back :</label>
-            <input type="text" name="Reward_Cash_Back" style="width: 250px" id="Reward_Cash_Back" required=True/>
-            <br>
-            <br><label for=12>Reward Points :</label>
-            <input type="text" name="Reward_Points" style="width: 250px" id="Reward_Points" required=True/>
-            <br>
-            <br><label for=13>mailer Letter :</label>
-            <input type="text" name="mailer_Letter" style="width: 250px" id="mailer_Letter" required=True/>
-            <br>
-            <br><label for=14>mailer Postcard :</label>
-            <input type="text" name="mailer_Postcard" style="width: 250px" id="mailer_Postcard" required=True/>
-            <br>
-            <br><label for=15>income High :</label>
-            <input type="text" name="income_High" style="width: 250px" id="income_High" required=True/>
-            <br>
-            <br><label for=16>income Low :</label>
-            <input type="text" name="income_Low" style="width: 250px" id="income_Low" required=True/>
-            <br>
-            <br><label for=17>income Medium :</label>
-            <input type="text" name="income_Medium" style="width: 250px" id="income_Medium" required=True/>
-            <br>
-            <br><label for=18>overdraw No :</label>
-            <input type="text" name="overdraw_No" style="width: 250px" id="overdraw_No" required=True/>
-            <br>
-            <br><label for=19>overdraw Yes :</label>
-            <input type="text" name="overdraw_Yes" style="width: 250px" id="overdraw_Yes" required=True/>
-            <br>
-            <br><label for=20>CC 1 :</label>
-            <input type="text" name="CC_1" style="width: 250px" id="CC_1" required=True/>
-            <br>
-            <br><label for=21>CC 2 :</label>
-            <input type="text" name="CC_2" style="width: 250px" id="CC_2" required=True/>
-            <br>
-            <br><label for=22>CC 3 :</label>
-            <input type="text" name="CC_3" style="width: 250px" id="CC_3" required=True/>
-            <br>
-            <br><label for=23>CC 4 :</label>
-            <input type="text" name="CC_4" style="width: 250px" id="CC_4" required=True/>
-            <br>
-            <br><label for=24>hold home 1 :</label>
-            <input type="text" name="hold_home_1" style="width: 250px" id="hold_home_1" required=True/>
-            <br>
-            <br><label for=25>hold home 2 :</label>
-            <input type="text" name="hold_home_2" style="width: 250px" id="hold_home_2" required=True/>
-            <br>
-            <br><label for=26>hold home 3 :</label>
-            <input type="text" name="hold_home_3" style="width: 250px" id="hold_home_3" required=True/>
+          <div class="form-row" style="width: 750px">
+            <div class="form-group col-md-3" style="width: 120px" required="required">
+              <label for=1>How many Bank Account :</label>
+              <select name="Bank_Accnt_Open" id="Bank_Accnt_Open" class="form-control">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+              </select>
+            </div> 
+            <div style="width: 10px"></div>
+            <div class="form-group col-md-3" style="width: 120px" required="required">
+              <label for=2>Household Size :</label>
+              <select name="Household_Size" id="Household_Size" class="form-control">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+              </select>
+            </div> 
+            <div style="width: 4px"></div>
+            <div class="form-group col-md-3" style="width: 120px" required="required">
+              <label for=3>Homes Owned :</label>
+              <select name="Homes_Owned" id="Homes_Owned" class="form-control">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+              </select>
+            </div> 
+            <div style="width: 4px"></div>
+            <div class="form-group col-md-3" style="width: 120px" required="required">
+              <label for=4>Credit Rating :</label>
+              <select name="Credit_Rating" id="Credit_Rating" class="form-control">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+              </select>
+            </div> 
+          </div>
+          <br><br><br>
+          <div class="form-row" style="width: 750px;">
+            <div class="form-group col-md-auto" style="width: 155px" required="required">
+              <label for=5>Average Balance :</label>
+              <input type="text" name="Average_Balance" style="width: 120px" id="Average_Balance" required=True/>
+            </div>
+            <div class="form-group col-md-auto" style="width: 155px" required="required">
+              <label for=6>Q1 Balance :</label>
+              <input type="text" name="Q1_Balance" style="width: 120px" id="Q1_Balance" required=True/>
+            </div>
+            <div class="form-group col-md-auto" style="width: 155px" required="required">
+              <label for=7>Q2 Balance :</label>
+              <input type="text" name="Q2_Balance" style="width: 120px" id="Q2_Balance" required=True/>
+            </div>
+            <div class="form-group col-md-auto" style="width: 155px" required="required">
+              <label for=8>Q3 Balance :</label>
+              <input type="text" name="Q3_Balance" style="width: 120px" id="Q3_Balance" required=True/>
+            </div>
+            <div class="form-group col-md-auto" style="width: 155px" required="required">
+              <label for=9>Q4 Balance :</label>
+              <input type="text" name="Q4_Balance" style="width: 120px" id="Q4_Balance" required=True/>
+            </div>
+          </div>
+          <br><br><br>
+          <div class="form-row" style="width: 800px;">
+            <div class="form-group col-md-4" style="width: 150px" required="required">
+              <label for=10>Customer Reward :</label>
+              <select name="reward_bonus" id="reward_bonus" class="form-control">
+                <option value="Reward_Air_Miles">Air Miles</option>
+                <option value="Reward_Cash_Back">Cash Back</option>
+                <option value="Reward_Points">Point</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4" style="width: 150px" required="required">
+              <label for=13>Mailer Type :</label>
+              <select name="mailers" id="mailers" class="form-control">
+                <option value="letter">Letter</option>
+                <option value="post">Postcard</option>
+              </select>  
+            </div>
+            <div class="form-group col-md-4" style="width: 150px" required="required">
+              <label for=15>Customer Income :</label>
+              <select name="income" id="income" class="form-control">
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>  
+            </div>
+          </div>
+          <br><br><br>
+          <div class="form-row" style="width: 800px;">
+            <div class="form-group col-md-4" style="width: 150px" required="required">
+              <label for=18>Card Overdraw Protection :</label>
+              <select name="ovprot" id="ovprot" class="form-control">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4" style="width: 150px" required="required">
+              <label for=18>Own Number CC :</label>
+              <select name="cc" id="cc" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4" style="width: 150px" required="required">
+              <label for=24>Home(s) Owned :</label>
+              <select name="hom" id="hom" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+          </div>
+            
             <br>
             <br>
             <input type='submit' value='Analyze'>
