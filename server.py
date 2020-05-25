@@ -1,12 +1,17 @@
 import joblib
 import numpy as np
 import pandas as pd
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, url_for,send_from_directory
+import numpy as np
 
 app = Flask(__name__)
 @app.route('/Home-CreditCard-Prediction')
 def home():
     return render_template('Home.html')
+
+@app.route('/gallery/<path:x>')
+def gal(x):
+    return send_from_directory("gallery",x)
 
 @app.route('/About')
 def about():
