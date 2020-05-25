@@ -17,7 +17,14 @@
           background: #928080;
           height: 250px;
         }
-
+        .navbar b{
+          background-color: #333;
+          position: fixed;
+          overflow: hidden;
+          bottom: 0;
+          font-family: Arial, Helvetica, sans-serif;
+          width: 100%;
+        }
         .navbar {
           overflow: hidden;
           background-color: #333;
@@ -25,7 +32,10 @@
           margin: 25px 100px 75px 50px;
         }
         * {box-sizing:border-box}
-
+        .navbar a.active {
+          background-color: #4CAF50;
+          color: white;
+        }
         /* Slideshow container */
         .slideshow-container {
           max-width: 88%;
@@ -51,14 +61,16 @@
         .next {
           right: 0;
           border-radius: 3px 0 0 3px;
+          color: rgba(0,0,0,0.2);
         }
         .prev {
           left: 0;
           border-radius: 3px 0 0 3px;
+          color: rgba(0,0,0,0.2);
         }
         /* On hover, add a black background color with a little bit see-through */
         .prev:hover, .next:hover {
-          background-color: rgba(0,0,0,0.8);
+          background-color:slategrey;
         }
         /* Caption text */
         .text {
@@ -196,13 +208,25 @@
         .show {
           display: block;
         }
-
+        .footer {
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 90%;
+          background-color:#333;
+          color: white;
+          text-align: left;
+          margin: 25px 100px 75px 50px;
+          height: 49px;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 30px;
+        }
     </style>
 </head>
 <body>
     <h1 class="text-center my-3">Credit Card Marketing Dashboard</h1>
     <div class="navbar">
-        <a href="/Home-CreditCard-Prediction">Home</a>
+        <a href="/Home-CreditCard-Prediction" class="active">Home</a>
         <div class="dropdown">
         <button class="dropbtn" onmouseover="myFunction()">Menu
             <!-- <i class="fa fa-caret-down"></i> -->
@@ -303,7 +327,6 @@
     <span class="dot" onclick="currentSlide(8)"></span> 
     <span class="dot" onclick="currentSlide(9)"></span> 
     <span class="dot" onclick="currentSlide(10)"></span> 
-    <!-- <span class="dot" onclick="currentSlide(11)"></span> -->
 </div>
 </center>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -339,5 +362,11 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>    
+<div class="footer navbar a">
+  <a href="/Home-CreditCard-Prediction" class="">Home</a>
+  <a href="/Visualisation">Visualisation</a>
+  <a href="/">Prediction</a>
+  <a href="/About">About</a>
+</div> 
 </body>
 </html>

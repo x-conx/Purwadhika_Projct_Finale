@@ -20,15 +20,25 @@
           font-weight: bold;
           font-family: 'Arial';
           font-size: 53px;
-      }
+        }
         .navbar {
           overflow: hidden;
           background-color: #333;
           font-family: Arial, Helvetica, sans-serif;
           margin: 25px 100px 75px 50px;
-          
         }
-
+        .navbar b{
+          background-color: #333;
+          position: fixed;
+          overflow: hidden;
+          bottom: 0;
+          font-family: Arial, Helvetica, sans-serif;
+          width: 100%;
+        }
+        .navbar a.active {
+          background-color: #4CAF50;
+          color: white;
+        }
         .column {
           float: left;
           padding: 10px;
@@ -120,13 +130,25 @@
           font-weight:bold;
           color: {{color}}
         }
-
+        .footer {
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 90%;
+          background-color:#333;
+          color: white;
+          text-align: left;
+          margin: 25px 100px 75px 50px;
+          height: 49px;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 30px;
+        }
     </style>
 </head>
 <body>
     <h1 class="text-center my-3">Credit Card Marketing Dashboard</h1>
     <div class="navbar">
-        <a href="/Home-CreditCard-Prediction">Home</a>
+        <a href="/Home-CreditCard-Prediction" class="active">Home</a>
         <div class="dropdown">
         <button class="dropbtn" onmouseover="myFunction()">Menu
             <!-- <i class="fa fa-caret-down"></i> -->
@@ -201,5 +223,12 @@
         <!-- <div class="column side"></div> -->
     
 </center>
+
+<div class="footer navbar a">
+  <a href="/Home-CreditCard-Prediction" class="">Home</a>
+  <a href="/Visualisation">Visualisation</a>
+  <a href="/">Prediction</a>
+  <a href="/About">About</a>
+</div> 
 </body>
 </html>

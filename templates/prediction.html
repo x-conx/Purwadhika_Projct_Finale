@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=-, initial-scale=1.0">
     <title>Prediction</title>
     <style>
+        .footer {
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 90%;
+          background-color:#333;
+          color: white;
+          text-align: left;
+          margin: 25px 100px 75px 50px;
+          height: 49px;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 30px;
+        }
+        
         .item-h1 {
           border: 2px solid black;
           padding: 7px;
@@ -83,6 +97,10 @@
           padding: 16px 20px;
           text-decoration: none;
         }
+        .navbar a.active {
+          background-color: #4CAF50;
+          color: white;
+        }
         .text-center{
           text-align:center!important;
           font-family: Helvetica;
@@ -159,7 +177,7 @@
     <h1 class="text-center my-3">Credit Card Marketing Dashboard</h1>
     
     <div class="navbar">
-        <a href="/Home-CreditCard-Prediction">Home</a>
+        <a href="/Home-CreditCard-Prediction" class="active">Home</a>
         <div class="dropdown">
         <button class="dropbtn" onmouseover="myFunction()">Menu
             <!-- <i class="fa fa-caret-down"></i> -->
@@ -324,7 +342,12 @@
             <br>
         </form>
 </center>>
-    
-    
+<div class="footer navbar a">
+  <a href="/Home-CreditCard-Prediction" class="">Home</a>
+  <a href="/Visualisation">Visualisation</a>
+  <a href="/">Prediction</a>
+  <a href="/About">About</a>
+</div>   
+
 </body>
 </html>

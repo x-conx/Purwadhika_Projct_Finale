@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credit Card Marketing Prediction</title>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-    <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script> -->
     <style>
         .item-h1 {
           border: 2px solid black;
           padding: 7px;
           height: 50px;
         }
-
+        .footer {
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 90%;
+          background-color:#333;
+          color: white;
+          text-align: left;
+          margin: 25px 100px 75px 50px;
+          height: 49px;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 30px;
+        }
         .row-h1 {
           background: #928080;
           height: 250px;
@@ -26,7 +35,10 @@
           margin: 25px 100px 75px 50px;
           
         }
-
+        .navbar a.active {
+          background-color: #4CAF50;
+          color: white;
+        }
         .column {
           float: left;
           padding: 10px;
@@ -39,6 +51,9 @@
         /* Middle column */
         .column.middle {
           width: 50%;
+          margin-left: 100px;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 20px;
         }
         /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 450px) {
@@ -119,7 +134,7 @@
     <h1 class="text-center my-3">Credit Card Marketing Dashboard</h1>
     
     <div class="navbar">
-      <a href="/Home-CreditCard-Prediction">Home</a>
+      <a href="/Home-CreditCard-Prediction" class="active">Home</a>
       <div class="dropdown">
       <button class="dropbtn" onmouseover="myFunction()">Menu
           <!-- <i class="fa fa-caret-down"></i> -->
@@ -155,12 +170,17 @@
     
     <div class="row">
       <div class="column middle">
-        <h2>About the Project!</h2>
-        <p>The project is set by <a href="https://www.purwadhika.com/">Purwadhika</a>.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolore totam possimus nesciunt officia animi, earum repudiandae in nostrum aperiam soluta atque minus hic adipisci doloribus deleniti, odit quam quidem!</p>
+        <h2 >About the Project!</h2>
+        <p >The project is set by <a href="https://www.purwadhika.com/">Purwadhika</a>.</p>
+        <p >The Project took about two weeks. Special thanks to <a href="https://www.w3schools.com/default.asp">W3Schools.com</a>, <a href="https://stackoverflow.com/">stackoverflow.com</a> and many other soueces that I cannot mentioned here.</p>
       </div>
       <div class="column side"></div>
     </div>
-
+    <div class="footer navbar a">
+      <a href="/Home-CreditCard-Prediction" class="">Home</a>
+      <a href="/Visualisation">Visualisation</a>
+      <a href="/">Prediction</a>
+      <a href="/About">About</a>
+    </div> 
 </body>
 </html>
