@@ -7,7 +7,7 @@ Dataset: Credit Card Dataset
 
 Source : [data.world](https://data.world/gautam2510/credit-card-dataset)
 
-![Data](https://github.com/x-conx/Purwadhika_Projct_Finale/blob/master/presentation%20pic/df.jpg)
+![](https://github.com/x-conx/Purwadhika_Projct_Finale/blob/master/presentation%20pic/df.jpg)
 
 PROJECT DESCRIPTION
 ---
@@ -21,7 +21,7 @@ The raw data from this source is not clearly explain where the data from, what t
 
 Final decision for this classification model is Decision Tree Classifier
 
-![Data](https://github.com/x-conx/Purwadhika_Projct_Finale/blob/master/presentation%20pic/result.jpg)
+![](https://github.com/x-conx/Purwadhika_Projct_Finale/blob/master/presentation%20pic/result.jpg)
 
 PROJECT GOALS
 ---
@@ -31,10 +31,10 @@ The goal of this project is to create a web application based on local host to c
 APPS
 ---
 HOME PAGE
-![Data](https://github.com/x-conx/Purwadhika_Projct_Finale/blob/master/presentation%20pic/Screenshot%20(101).png)
+![](https://github.com/x-conx/Purwadhika_Projct_Finale/blob/master/presentation%20pic/home.png)
 
 PREDICTION PAGE 
-![Data](https://github.com/x-conx/Purwadhika_Projct_Finale/blob/master/presentation%20pic/Screenshot%20(104).png)
+![](https://github.com/x-conx/Purwadhika_Projct_Finale/blob/master/presentation%20pic/input.png)
 
 The application user can input data as described below:
 - `How many bank account?` : number of bank account that customer cuurently holding
@@ -56,14 +56,14 @@ The application user can input data as described below:
 PREDICTION RESULT
 ---
 Customer will agree to create new credit card
-![Data](https://github.com/x-conx/Purwadhika_Projct_Finale/blob/master/presentation%20pic/Screenshot%20(105).png)
+![](https://github.com/x-conx/Purwadhika_Projct_Finale/blob/master/presentation%20pic/agree.png)
 Customer will not create a new credit card
-![Data](https://github.com/x-conx/Purwadhika_Projct_Finale/blob/master/presentation%20pic/decline.jpg)
+![](https://github.com/x-conx/Purwadhika_Projct_Finale/blob/master/presentation%20pic/decline.jpg)
 
 VISUALISATION PAGE
 ---
-![Data](https://github.com/x-conx/Purwadhika_Projct_Finale/blob/master/presentation%20pic/Screenshot%20(103).png)
+![](https://github.com/x-conx/Purwadhika_Projct_Finale/blob/master/presentation%20pic/vis.png)
 
 ABOUT
 ---
-![Data](https://github.com/x-conx/Purwadhika_Projct_Finale/blob/master/presentation%20pic/Screenshot%20(102).png)
+![](https://github.com/x-conx/Purwadhika_Projct_Finale/blob/master/presentation%20pic/about.png)
