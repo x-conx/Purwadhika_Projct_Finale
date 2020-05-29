@@ -39,7 +39,7 @@ PREDICTION PAGE
 The application user can input data as described below:
 - `How many bank account?` : number of bank account that customer cuurently holding
 - `Household size`         : indication of approximate customers' current house size judgement from scale 1 to 6, 1 for very small and 6 for very large
-- `Owned Cuurent Home`     : number of home(s) that currently owned by customer
+- `Owned Current Home`     : if customer currently stay at personal home or not
 - `Credit Rating`          : the rating that given by bank system (rating of an ability in term of financial performance)
 - `Average Balance`        : the average amount of moneny that present in the customer's bank account fot the last 12 months or last financial year
 - `Q1 Balance`             : first quarter balance from last financial year
