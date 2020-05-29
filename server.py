@@ -149,6 +149,11 @@ def creditcard_predict():
         Bank_Accnt_Open = int(input['Bank_Accnt_Open'])
         Household_Size = int(input['Household_Size'])
         Homes_Owned = int(input['Homes_Owned'])
+        str_ownhome = ''
+        if Homes_Owned == 1:
+            str_ownhome = 'Yes'
+        else:
+            str_ownhome = 'No'
         Credit_Rating = int(input['Credit_Rating'])
         Average_Balance = float(input['Average_Balance'])
         Q1_Balance = float(input['Q1_Balance'])
@@ -173,7 +178,7 @@ def creditcard_predict():
         
         return render_template('prediction result.html',
         data=input, prediction=endresult, Bank_Accnt_Open=Bank_Accnt_Open,Household_Size=Household_Size,
-        Homes_Owned=Homes_Owned,Credit_Rating=Credit_Rating,Average_Balance=Average_Balance,
+        Homes_Owned=str_ownhome,Credit_Rating=Credit_Rating,Average_Balance=Average_Balance,
         Q1_Balance=Q1_Balance,Q2_Balance=Q2_Balance,Q3_Balance=Q3_Balance,
         Q4_Balance=Q4_Balance,Reward=strRew,mailer=strmail,
         income=strin,overdraw=strovrd,cc=strcc,hold_home=strhom,color=col)
