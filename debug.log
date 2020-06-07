@@ -12,3 +12,21 @@
 [0529/143004.265:ERROR:process_info.cc(617)] range at 0x2348bf04650, size 0x28 fully unreadable
 [0529/143004.266:ERROR:process_info.cc(617)] range at 0x2348bf0e700, size 0x28 fully unreadable
 [0529/143008.000:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value d90f768b-e4c8-4f26-b154-0f8843ee9073
+[0607/113424.820:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value d90f768b-e4c8-4f26-b154-0f8843ee9073
+[0607/113428.618:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value d90f768b-e4c8-4f26-b154-0f8843ee9073
+[0607/113431.780:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value d90f768b-e4c8-4f26-b154-0f8843ee9073
+[0607/113434.715:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value d90f768b-e4c8-4f26-b154-0f8843ee9073
+[0607/113437.955:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value d90f768b-e4c8-4f26-b154-0f8843ee9073
+[0607/113442.099:WARNING:minidump_to_upload_parameters.cc(36)] duplicate key guid, discarding value d90f768b-e4c8-4f26-b154-0f8843ee9073
+[0607/113442.633:ERROR:process_info.cc(617)] range at 0x2c1fff55828, size 0x28 fully unreadable
+[0607/113442.634:ERROR:process_info.cc(617)] range at 0x2c1fff119a0, size 0x28 fully unreadable
+[0607/113442.635:ERROR:process_info.cc(617)] range at 0x2c1fff10f18, size 0x28 fully unreadable
+[0607/113442.635:ERROR:process_info.cc(617)] range at 0x2c1fff4d9f8, size 0x28 fully unreadable
+[0607/113442.902:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ff9b95b0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0607/113442.902:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\SYSTEM32\RTWorkQ.DLL
+[0607/113442.903:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ff9b95b0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0607/113442.903:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\SYSTEM32\RTWorkQ.DLL
+[0607/113442.904:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ff98e7d0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0607/113442.904:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\SYSTEM32\msmpeg2vdec.dll
+[0607/113442.905:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ff98e7d0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0607/113442.905:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\SYSTEM32\msmpeg2vdec.dll
